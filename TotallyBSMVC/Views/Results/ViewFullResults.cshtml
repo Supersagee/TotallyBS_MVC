@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Results>
+
+<h3>Race Results</h3>
+
+<table class="table">
+    <tr>
+        <th>Pos</th>
+        <th>#</th>
+        <th>Driver</th>
+        <th>Start</th>
+        <th>Interval</th>
+        <th>Laps Led</th>
+        <th>Best Lap</th>
+        <th>Best Lap Time</th>
+        <th>Average Lap</th>
+        <th>Inc</th>
+        <th>Div</th>
+        <th>Club</th>
+        <th>SafetyRating</th>
+        <th>iRating</th>
+        <th>SessionId</th>
+    </tr>
+    
+    @foreach(var result in Model)
+    {
+        <tr>
+            <td>@result.FinishPosition</td>
+            <td>@result.CarNumber</td>
+            <td>@result.DisplayName</td>
+            <td>@result.StartingPosition</td>
+            <td>@result.FinishInterval</td>
+            <td>@result.LapsLed</td>
+            <td>@result.BestLapNum</td>
+            <td>@result.BestLapTime</td>
+            <td>@result.AverageLap</td>
+            <td>@result.Incidents</td>
+            <td>@result.Division</td>
+            <td>@result.ClubShortName</td>
+            <td>@result.NewSafetyRating</td>
+            <td>@result.NewiRating</td>
+            <td>@result.SessionId</td>
+        </tr>
+    }
+
+</table>
