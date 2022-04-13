@@ -19,9 +19,9 @@ namespace TotallyBSMVC.Controllers
                 return View(results);
         }
 
-        public IActionResult ViewFullResults(int sessionId)
+        public IActionResult ViewFullResults(int id)
         {
-            var results = repo.GetFullResults(sessionId);
+            var results = repo.GetFullResults(id);
 
             return View(results);
         }

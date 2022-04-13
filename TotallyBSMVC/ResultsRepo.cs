@@ -21,7 +21,7 @@ namespace TotallyBSMVC
 
         public IEnumerable<Results> GetFullResults(int sessionId)
         {
-            return _connection.Query<Results>("SELECT * FROM results WHERE SessionId = '@SessionId';",
+            return _connection.Query<Results>("SELECT * FROM results WHERE SessionId = @SessionId;",
                 new { SessionId = sessionId });
         }
     }
