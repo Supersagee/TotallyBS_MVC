@@ -12,6 +12,5 @@ namespace TotallyBSMVC.Models
         public string LicenseCategory { get; set; }
         public string TrackName { get; set; }
         public int StrengthOfField { get; set; }
-        public Results[] Results { get; set; }
     }
 }

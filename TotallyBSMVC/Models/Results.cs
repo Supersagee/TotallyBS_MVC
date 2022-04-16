@@ -10,16 +10,17 @@ namespace TotallyBSMVC.Models
         public int CarNumber { get; set; }
         public int FinishPosition { get; set; }
         public int StartingPosition { get; set; }
-        public int FinishInterval { get; set; }
+        public string FinishInterval { get; set; }
         public int LapsLed  { get; set; }
-        public int BestLapNum { get; set; }
-        public int BestLapTime { get; set; }
-        public int AverageLap { get; set; }
+        public int LapsComplete { get; set; }
+        public string BestLapNum { get; set; }
+        public string BestLapTime { get; set; }
+        public string AverageLap { get; set; }
         public int Incidents { get; set; }
         public int Division { get; set; }
         public string ClubShortName { get; set; }
-        public int OldLicenseLevel { get; set; }
-        public int NewLicenseLevel { get; set; }
+        public string OldLicenseLevel { get; set; }
+        public string NewLicenseLevel { get; set; }
         public decimal OldSafetyRating { get; set; }
         public decimal NewSafetyRating { get; set; }
         public int OldiRating { get; set; }

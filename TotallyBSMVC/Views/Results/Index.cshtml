@@ -10,7 +10,7 @@
         <th>Category</th>
         <th>Track</th>
         <th>SOF</th>
-        <th>Session</th>
+        <th></th>
     </tr>
 
     @foreach (var result in Model.Reverse())
@@ -22,7 +22,7 @@
             <td>@result.LicenseCategory</td>
             <td>@result.TrackName</td>
             <td>@result.StrengthOfField</td>
-            <td><a href=/Results/ViewFullResults/@result.SessionId>@result.SessionId</a></td>
+            <td><a href=/Results/ViewFullResults/@result.SessionId target="_blank">Results</a></td>
         </tr>
     }
 </table>

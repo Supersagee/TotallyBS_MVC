@@ -4,12 +4,13 @@
 
 <table class="table">
     <tr>
-        <th>Pos</th>
-        <th>#</th>
-        <th>Driver</th>
-        <th>Start</th>
+        <th>Finish Pos</th>
+        <th>Car #</th>
+        <th>Driver Name</th>
+        <th>Start Pos</th>
         <th>Interval</th>
         <th>Laps Led</th>
+        <th>Laps Comp</th>
         <th>Best Lap</th>
         <th>Best Lap Time</th>
         <th>Average Lap</th>
@@ -18,7 +19,6 @@
         <th>Club</th>
         <th>SafetyRating</th>
         <th>iRating</th>
-        <th>SessionId</th>
     </tr>
     
     @foreach(var result in Model)
@@ -30,15 +30,15 @@
             <td>@result.StartingPosition</td>
             <td>@result.FinishInterval</td>
             <td>@result.LapsLed</td>
+            <td>@result.LapsComplete</td>
             <td>@result.BestLapNum</td>
             <td>@result.BestLapTime</td>
             <td>@result.AverageLap</td>
             <td>@result.Incidents</td>
             <td>@result.Division</td>
             <td>@result.ClubShortName</td>
-            <td>@result.NewSafetyRating</td>
+            <td>@result.NewLicenseLevel @result.NewSafetyRating</td>
             <td>@result.NewiRating</td>
-            <td>@result.SessionId</td>
         </tr>
     }
 
