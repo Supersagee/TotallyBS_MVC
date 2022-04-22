@@ -1,45 +1,84 @@
-﻿@model IEnumerable<Results>
+﻿@using TotallyBSMVC.ViewModels
+@model FullResultsVM
 
-<h3>Race Results</h3>
+@{
+    ViewData["Title"] = "Race Results";
+}
 
-<table class="table">
+<body style="background-image: url('/css/image/vantageGT4filtered.jpg')">
+<h3 class="text-light">Race Results</h3>
+
+<table class="table table-sm text-white table-bordered table-dark" style="background-color: rgba(41,43,44, 0.94) !important">
     <tr>
-        <th>Finish Pos</th>
-        <th>Car #</th>
-        <th>Driver Name</th>
-        <th>Start Pos</th>
-        <th>Interval</th>
-        <th>Laps Led</th>
-        <th>Laps Comp</th>
-        <th>Best Lap</th>
-        <th>Best Lap Time</th>
-        <th>Average Lap</th>
-        <th>Inc</th>
-        <th>Div</th>
-        <th>Club</th>
-        <th>SafetyRating</th>
-        <th>iRating</th>
+        <th>Time</th>
+        <th>Series</th>
+        <th>Event</th>
+        <th>Category</th>
+        <th>Track</th>
+        <th>SOF</th>
+        <th>Session ID</th>
     </tr>
-    
-    @foreach(var result in Model)
-    {
-        <tr>
-            <td>@result.FinishPosition</td>
-            <td>@result.CarNumber</td>
-            <td>@result.DisplayName</td>
-            <td>@result.StartingPosition</td>
-            <td>@result.FinishInterval</td>
-            <td>@result.LapsLed</td>
-            <td>@result.LapsComplete</td>
-            <td>@result.BestLapNum</td>
-            <td>@result.BestLapTime</td>
-            <td>@result.AverageLap</td>
-            <td>@result.Incidents</td>
-            <td>@result.Division</td>
-            <td>@result.ClubShortName</td>
-            <td>@result.NewLicenseLevel @result.NewSafetyRating</td>
-            <td>@result.NewiRating</td>
-        </tr>
-    }
 
+    <tr>            
+        <td>@Model.SubResults.StartTime</td>
+        <td>@Model.SubResults.SeriesName</td>
+        <td>@Model.SubResults.EventTypeName</td>
+        <td>@Model.SubResults.LicenseCategory</td>
+        <td>@Model.SubResults.TrackName</td>
+        <td>@Model.SubResults.StrengthOfField</td>
+        <td>@Model.SubResults.SessionId</td>
+    </tr>
 </table>
+
+
+<div class="container">
+    <table class="table table-fixed table-sm table-striped text-white table-borderless table-dark" style="background-color: rgba(41,43,44, 0.94) !important">
+        <thead>
+            <tr>
+                <th>Finish Pos</th>
+                <th>Class Pos</th>
+                <th>Car #</th>
+                <th>Driver Name</th>
+                <th>Start Pos</th>        
+                <th>Interval</th>
+                <th>Laps Led</th>
+                <th>Laps Comp</th>
+                <th>Best Lap</th>
+                <th>Best Time</th>
+                <th>Average Lap</th>
+                <th>Inc</th>
+                <th>Div</th>
+                <th>Club</th>
+                <th>Car</th>
+                <th>Safety Rating</th>
+                <th>iRating</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @foreach(var result in Model.Results) 
+            {
+                <tr>
+                    <td>@result.FinishPosition</td>
+                    <td>@result.ClassPosition</td>
+                    <td>@result.CarNumber</td>
+                    <td>@result.DisplayName</td>
+                    <td>@result.StartingPosition</td>
+                    <td>@result.FinishInterval</td>
+                    <td>@result.LapsLed</td>
+                    <td>@result.LapsComplete</td>
+                    <td>@result.BestLapNum</td>
+                    <td>@result.BestLapTime</td>
+                    <td>@result.AverageLap</td>
+                    <td>@result.Incidents</td>
+                    <td>@result.Division</td>
+                    <td>@result.ClubShortName</td>
+                    <td>@result.CarName</td>
+                    <td>@result.NewLicenseLevel @result.NewSafetyRating</td>
+                    <td>@result.NewiRating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</body>

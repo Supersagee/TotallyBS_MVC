@@ -94,6 +94,7 @@ C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\bin\Debug\net5.0\Ubiety.Dn
 C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\bin\Debug\net5.0\ZstdNet.dll
 C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\bin\Debug\net5.0\System.Net.Http.Json.dll
-C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\obj\Debug\net5.0\Razor\Views\Results\Index.cshtml.g.cs
 C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\obj\Debug\net5.0\Razor\Views\Results\ViewFullResults.cshtml.g.cs
 C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\bin\Debug\net5.0\appsettings.json
+C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\obj\Debug\net5.0\Razor\Views\Results\Index.cshtml.g.cs
+C:\Users\Billy\source\repos\TotallyBSMVC\TotallyBSMVC\obj\Debug\net5.0\Razor\Views\Results\ViewRatings.cshtml.g.cs

@@ -9,6 +9,7 @@ namespace TotallyBSMVC.Models
         public string DisplayName { get; set; }
         public int CarNumber { get; set; }
         public int FinishPosition { get; set; }
+        public int ClassPosition { get; set; }
         public int StartingPosition { get; set; }
         public string FinishInterval { get; set; }
         public int LapsLed  { get; set; }
@@ -25,7 +26,8 @@ namespace TotallyBSMVC.Models
         public decimal NewSafetyRating { get; set; }
         public int OldiRating { get; set; }
         public int NewiRating { get; set; }
-        public int Car { get; set; }
+        public int CarId { get; set; }
+        public string CarName { get; set; }
 
     }
 }

@@ -1,28 +1,38 @@
 ﻿@model IEnumerable<SubResults>
 
-<h2>Results</h2>
+@{
+    ViewData["Title"] = "Results";
+}
 
-<table class="table">
-    <tr>
-        <th>Time</th>
-        <th>Series</th>
-        <th>Event</th>
-        <th>Category</th>
-        <th>Track</th>
-        <th>SOF</th>
-        <th></th>
-    </tr>
+<h2 class="text-light">Results</h2>
 
-    @foreach (var result in Model.Reverse())
-    {
-        <tr>            
-            <td>@result.StartTime</td>
-            <td>@result.SeriesName</td>
-            <td>@result.EventTypeName</td>
-            <td>@result.LicenseCategory</td>
-            <td>@result.TrackName</td>
-            <td>@result.StrengthOfField</td>
-            <td><a href=/Results/ViewFullResults/@result.SessionId target="_blank">Results</a></td>
-        </tr>
-    }
-</table>
+<div class="container">
+    <table class="table table-fixed table-striped text-white table-borderless table-dark" style="background-color: rgba(41,43,44, 0.94) !important">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Series</th>
+                <th>Event</th>
+                <th>Category</th>
+                <th>Track</th>
+                <th>SOF</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var result in Model.Reverse())
+            {
+                <tr>            
+                    <td>@result.StartTime</td>
+                    <td>@result.SeriesName</td>
+                    <td>@result.EventTypeName</td>
+                    <td>@result.LicenseCategory</td>
+                    <td>@result.TrackName</td>
+                    <td>@result.StrengthOfField</td>
+                    <td><a style="color: #E6FF1F" href=/Results/ViewFullResults/@result.SessionId>Results</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

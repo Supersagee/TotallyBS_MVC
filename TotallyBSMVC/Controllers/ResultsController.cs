@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TotallyBSMVC.Models;
+using TotallyBSMVC.ViewModels;
 
 namespace TotallyBSMVC.Controllers
 {
@@ -22,8 +23,21 @@ namespace TotallyBSMVC.Controllers
         public IActionResult ViewFullResults(int id)
         {
             var results = repo.GetFullResults(id);
+            var resultHeader = repo.GetQuickResult(id);
+            var vm = new FullResultsVM
+            {
+                Results = results,
+                SubResults = resultHeader
+            };
 
-            return View(results);
+            return View(vm);
+        }
+
+        public IActionResult ViewRatings()
+        {
+            var ratings = repo.GetRatings();
+
+            return View(ratings);
         }
     }
 }
