@@ -5,28 +5,42 @@
 }
 
 <body>
-    <div class="row text-white justify-content-end" >
-        <div>
-            <h2 style="color: #E6FF1F">Current Ratings:</h2>
-        </div>
-        <div class="col-md-1">
-            <h2>Oval</h2>
-            <p>@Model.OvalLicense @Model.OvalSafetyRating @Model.OvaliRating</p>
-        </div>
-        <div class="col-md-1">
-            <h2>Road</h2>
-            <p>@Model.RoadLicense @Model.RoadSafetyRating @Model.RoadiRating</p>
-        </div>
-        <div class="col-md-1">
-            <h2>Dirt Oval</h2>
-            <p>@Model.DirtOvalLicense @Model.DirtOvalSafetyRating @Model.DirtOvaliRating</p>
-        </div>
-        <div class="col-md-1">
-            <h2>Dirt Road</h2>
-            <p>@Model.DirtRoadLicense @Model.DirtRoadSafetyRating @Model.DirtRoadiRating</p>
-        </div>
+    <div>
+        <h2 class="float-right" style="color: #E6FF1F">Current Ratings</h2>
+        <table class="table table-borderless table-sm text-white">
+            <tr>
+                <th></th>
+                <th style="width: 10%"></th>
+                <th style="width: 5%">SRating</th>
+                <th style="width: 5%">iRating</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-style: italic; background-color: rgba(41,43,44, 0.94) !important">Oval</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.OvalLicense @Model.OvalSafetyRating</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.OvaliRating</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-style: italic; background-color: rgba(41,43,44, 0.94) !important">Road</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.RoadLicense @Model.RoadSafetyRating</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.RoadiRating</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-style: italic; background-color: rgba(41,43,44, 0.94) !important">Dirt Oval</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.DirtOvalLicense @Model.DirtOvalSafetyRating</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.DirtOvaliRating</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-style: italic; background-color: rgba(41,43,44, 0.94) !important">Dirt Road</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.DirtRoadLicense @Model.DirtRoadSafetyRating</td>
+                <td style="background-color: rgba(41,43,44, 0.94) !important">@Model.DirtRoadiRating</td>
+            </tr>
+        </table>
     </div>
-    
+
     <div class="text-center text-white" style="background-color: rgba(41,43,44, 0.94) !important">
         <h1>About Me</h1>
         <p>
@@ -47,7 +61,8 @@
         </p>
         <h1>Contact</h1>
         <p>
-            The best way to contact me is at: <a style="color: #E6FF1F" href = "mailto: williamdsage@gmail.com">williamdsage@gmail.com</a>
+            Contact me at: <a style="color: #E6FF1F" href = "mailto: williamdsage@gmail.com">williamdsage@gmail.com</a>, 
+            or on my <a style="color: #E6FF1F" href=https://www.linkedin.com/in/billy-sage-47aa6022b/ target="_blank">Linkedin</a>
         </p>
         <p>
             Check out my other projects on <a style="color: #E6FF1F" href=https://github.com/Supersagee target="_blank">GitHub</a>
