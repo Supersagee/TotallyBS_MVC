@@ -67,6 +67,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
+    font-family: Cantarell;
 }
 .footer {
   position: absolute;
@@ -81,6 +82,5 @@ body {
     height: 620px;
     overflow-y: auto;
 }
-
 
 

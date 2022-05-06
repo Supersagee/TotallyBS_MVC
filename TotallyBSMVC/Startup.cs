@@ -27,7 +27,7 @@ namespace TotallyBSMVC
         {
             services.AddScoped<IDbConnection>((s) =>
             { 
-                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("DefaultConnection"));
+                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("AzureConnection"));
                 conn.Open();
                 return conn;
             });
